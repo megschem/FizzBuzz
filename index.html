@@ -11,22 +11,28 @@
 
 <script type="text/javascript">
 
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-var numbersArray = numbers.split("");
-var numbersArrayLimit = 100;
+var numbers = [];
+var numberStart = 1;
+var numberEnd = 100;
+// var numbersArray = numbers.split("");
 
-// Create a for loop that prints numbers 1-100
-for (var counter = 1; counter <= 100; counter++) {
-	numbersArray = counter;
-	console.log(numbersArray);
+// Create a for loop that prints numbers 1-100 on separate lines
+for (var counter = numberStart; counter <= numberEnd; counter++) {
+	
+
+	// For each multiple of 3, print "Fizz" instead of the number.
+	if (counter % 3 === 0 && counter % 5 !== 0) {
+		console.log("Fizz");
+	} else if (counter % 5 === 0 && counter % 3 !== 0) {
+		// For each multiple of 5, print "Buzz" instead of the number.
+		console.log("Buzz");
+	} else if (counter % 3 === 0 && counter % 5 === 0) {
+		// For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
+		console.log("FizzBuzz");
+	} else {
+		console.log(counter);
+	}
 }
-
-
-// For each multiple of 3, print "Fizz" instead of the number.
-
-// For each multiple of 5, print "Buzz" instead of the number.
-
-// For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
 
 // Print these results to the web page
 
